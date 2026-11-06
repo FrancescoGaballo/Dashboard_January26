@@ -121,7 +121,7 @@
           const q = (qInput.value || "").trim().toLowerCase();
           const filtered = (E.DATA.items.items || []).filter((it) => {
             if (c && (it.country || "") !== c) return false;
-            if (t && !(it.tags || []).includes(t)) return false;
+            if (!E.itemMatchesTagFilter(it.tags, t)) return false;
             const ilang = ((it.language || "") + "").trim().toLowerCase();
             if (lang) {
               if (lang === "_unknown") {

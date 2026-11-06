@@ -7,7 +7,15 @@
 | `data/seed-items.json` | Manually curated **verified** items (YAML would also work; JSON keeps the merge script dependency-free). |
 | `data/rss-feeds.json` | **RSS/Atom only** — official and **trade press** feeds (direct feed URLs; no HTML news aggregators). Defaults: `country`, `tags`, optional `language`, optional `site_base_url`. |
 | `data/SOURCES.md` | Source register + ToS / attribution notes (maintain as feeds are enabled). |
-| `data/countries.json` | Page copy per country / region. |
+| `data/countries.json` | Page copy per country / region (`summary`, **`developer_conditions`** for the RES/BESS “situation” lens, `bess_framing`). |
+
+### Tag vocabulary (MVP)
+
+Use consistent slugs in `seed-items.json` and RSS `default_tags`:
+
+`market-design`, `balancing`, `grid`, `storage`, **`res-support`**, **`bess-support`**, **`permits-grid`**, **`use-of-system`**, **`retail-bills`**, **`gas-policy`**, `taxes-levies`, plus legacy **`support-schemes`**.
+
+**Alias behaviour (UI):** on **Signals**, filtering by **`res-support`** or **`bess-support`** also matches items that only carry **`support-schemes`**; pick `support-schemes` explicitly for the legacy bucket only.
 
 ## Merge
 

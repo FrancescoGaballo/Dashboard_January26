@@ -43,6 +43,21 @@ This writes `web/data/items.json` (what the site reads). It de-duplicates by `li
 - **Content** may mix **English, German, French, Spanish, or Italian** in titles/snippets depending on the feed (no auto-translation in MVP).
 - **UI chrome** is English-first with a lightweight locale selector (`localStorage` key `eudesk_locale`) covering EN/DE and **falling back to EN strings** for FR/ES/IT until expanded.
 
+## Tags (Signals filter)
+
+Preset vocabulary (extend freely in JSON):
+
+- `market-design`, `balancing`, `grid`, `storage`
+- **`res-support`**, **`bess-support`** — auctions, tenders, capacity/CfD-style mechanisms, consultations on storage eligibility
+- **`permits-grid`** — connection, hosting, permitting timelines
+- **`use-of-system`** — TSO/DSO charges, DUoS/TNUoS-style components where applicable
+- **`retail-bills`** — tariff / *bollette* components, pass-throughs to final customers
+- **`gas-policy`** — gas price or regulatory measures that shift power-side incentives or bill items
+- `taxes-levies` — explicit taxes/charges on production or consumption
+- **`support-schemes`** — **legacy** catch-all; the Signals filter treats it as an alias when you pick **`res-support`** or **`bess-support`** (items tagged only `support-schemes` still surface under those filters)
+
+Country pages include a static **Developer conditions (policy)** blurb from `data/countries.json` reminding what to track (RES support, BESS consultations, grid/UoS, retail/gas).
+
 ## Countries
 
 Section slugs: `eu` (cross-border/EU-level), `de`, `fr`, `es`, `ch`, `pl`, `nordics`, `uk`, `it` (Italy uses lighter default copy unless you expand `data/countries.json`).

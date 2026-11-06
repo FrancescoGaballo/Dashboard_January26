@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T13:54:43Z",
+  "generated_at": "2026-11-06T14:08:13Z",
   "items": [
     {
       "id": "rss-96f9949e1df63a6d",
@@ -752,36 +752,57 @@
       "language": "en"
     },
     {
-      "id": "seed-it-lighter-2025-11-02",
-      "title": "Illustrative — Italy (lighter default coverage in MVP)",
-      "summary": "Italy remains in scope but the MVP uses shorter default copy unless expanded in data/countries.json and seed-items.",
+      "id": "seed-it-retail-gas-2025-11",
+      "title": "Italy — monitor bollette and gas-linked bill measures; verify exact legal titles (TOPE and other labels)",
+      "summary": "Italian policy debate sometimes refers to storage or tariff measures under shorthand labels (e.g. references to **TOPE**) and **bollette** components. **Do not** rely on nickname alone—open the **adopted** decree/law or ARERA resolution and copy the precise instrument title from primary texts (e.g. *Gazzetta Ufficiale*, MASE decrees, ARERA deliberations).",
       "country": "it",
       "tags": [
-        "balancing",
-        "market-design"
+        "retail-bills",
+        "gas-policy",
+        "bess-support",
+        "res-support"
       ],
       "language": "en",
-      "published_at": "2025-11-02T10:15:00Z",
-      "source_name": "Curated seed (manual)",
+      "published_at": "2025-11-05T14:30:00Z",
+      "source_name": "ARERA (consumer / tariff reference)",
       "source_url": "https://www.arera.it/",
       "url": "https://www.arera.it/",
-      "opportunity_note": "Check AS/balancing evolution and gatekeeper processes; framing only—no site-specific advice."
+      "opportunity_note": "Separating proposal vs adopted Italian measures is essential for RES/BESS bankability; treat media nicknames as pointers only."
     },
     {
-      "id": "seed-de-grid-2025-11-01",
-      "title": "Illustrative — Germany grid planning update (replace with a real item)",
-      "summary": "Placeholder entry showing the item shape. Replace with a sourced update from Bundesnetzagentur, the German TSOs, or ENTSO-E publications.",
-      "country": "de",
+      "id": "seed-uk-bess-consult-2025-11",
+      "title": "United Kingdom — log BESS / flexibility consultations separately from adopted licences and grid connection rules",
+      "summary": "Tag DESNZ/Ofgem consultations on storage and operability as proposal until published as statutory instruments or licence modifications; pair with NESO/NGESO technical notices when relevant.",
+      "country": "uk",
       "tags": [
-        "grid",
-        "market-design"
+        "bess-support",
+        "market-design",
+        "permits-grid"
       ],
       "language": "en",
-      "published_at": "2025-11-01T09:00:00Z",
-      "source_name": "Curated seed (manual)",
+      "published_at": "2025-11-04T11:20:00Z",
+      "source_name": "UK government (energy portfolio hub)",
+      "source_url": "https://www.gov.uk/government/organisations/department-for-energy-security-and-net-zero",
+      "url": "https://www.gov.uk/government/organisations/department-for-energy-security-and-net-zero",
+      "opportunity_note": "Consultation language on participation products may change before adoption—check final determinations and licence conditions."
+    },
+    {
+      "id": "seed-de-dev-conditions-2025-11",
+      "title": "Germany — track adopted RES support, grid/UoS charges, and retail-bill levies for developer exposure",
+      "summary": "Use BNetzA / BMWK primary texts to separate proposal vs adopted measures affecting RES auctions, EEG-related charges, TSO/DSO use-of-system evolution, and components of end-user electricity bills.",
+      "country": "de",
+      "tags": [
+        "res-support",
+        "use-of-system",
+        "retail-bills",
+        "taxes-levies"
+      ],
+      "language": "en",
+      "published_at": "2025-11-03T09:00:00Z",
+      "source_name": "Bundesnetzagentur (reference hub)",
       "source_url": "https://www.bundesnetzagentur.de/",
       "url": "https://www.bundesnetzagentur.de/",
-      "opportunity_note": "Grid hosting and upgrade timelines can change connection and utilisation risk for flex resources; verify in official filings."
+      "opportunity_note": "Bill-component and UoS changes shift the boundary between merchant and regulated cash flows; confirm in adopted determinations rather than headlines."
     }
   ]
 }

@@ -57,6 +57,21 @@
           lede.textContent = country.summary || "";
           main.appendChild(lede);
 
+          if (country.developer_conditions) {
+            const dev = document.createElement("div");
+            dev.className = "panel";
+            const dh = document.createElement("strong");
+            dh.setAttribute("data-i18n", "country.developer_heading");
+            dh.textContent = E.t("country.developer_heading");
+            const dp = document.createElement("p");
+            dp.className = "item-summary";
+            dp.style.marginTop = "8px";
+            dp.textContent = country.developer_conditions;
+            dev.appendChild(dh);
+            dev.appendChild(dp);
+            main.appendChild(dev);
+          }
+
           const bess = document.createElement("div");
           bess.className = "panel";
           const bh = document.createElement("strong");

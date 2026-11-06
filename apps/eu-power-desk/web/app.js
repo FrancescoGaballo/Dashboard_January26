@@ -48,6 +48,7 @@ const UI_STRINGS = {
       "No signals tagged for this region yet. Add entries in data/seed-items.json or adjust RSS defaults.",
     "country.filter_signals": "Filter Signals for this region →",
     "country.bess_heading": "Optional BESS lens (not advice)",
+    "country.developer_heading": "Developer conditions (policy)",
     "country.open_full_feed": "Open the full feed",
     "meta.published": "Published",
     "meta.source": "Source",
@@ -97,6 +98,7 @@ const UI_STRINGS = {
       "Noch keine Signale für diese Region. Einträge in data/seed-items.json ergänzen oder RSS-Defaults anpassen.",
     "country.filter_signals": "Signale für diese Region filtern →",
     "country.bess_heading": "Optionaler BESS-Blick (keine Beratung)",
+    "country.developer_heading": "Rahmenbedingungen für Entwickler (Politik)",
     "country.open_full_feed": "Gesamten Feed öffnen",
     "meta.published": "Veröffentlicht",
     "meta.source": "Quelle",
@@ -126,12 +128,34 @@ const TAG_SUGGESTIONS = [
   "market-design",
   "balancing",
   "grid",
-  "support-schemes",
+  "res-support",
+  "bess-support",
+  "permits-grid",
+  "use-of-system",
+  "retail-bills",
+  "gas-policy",
   "taxes-levies",
   "storage",
+  // Legacy: prefer res-support / bess-support; Signals maps alias when filtering
+  "support-schemes",
 ];
 
+/** Legacy tag: selecting `res-support` or `bess-support` also matches items tagged only `support-schemes`. */
+const TAG_ALIASES = {
+  "res-support": ["support-schemes"],
+  "bess-support": ["support-schemes"],
+};
+
 const ACCEPT_LANGS = ["en", "de", "fr", "es", "it"];
+
+function itemMatchesTagFilter(itemTags, selectedTag) {
+  if (!selectedTag) return true;
+  const tags = itemTags || [];
+  if (tags.includes(selectedTag)) return true;
+  const extra = TAG_ALIASES[selectedTag];
+  if (!extra) return false;
+  return extra.some((a) => tags.includes(a));
+}
 
 function getLocale() {
   try {
@@ -310,6 +334,7 @@ window.EUDesk = {
   renderItemCard,
   bootCommon,
   TAG_SUGGESTIONS,
+  itemMatchesTagFilter,
   t,
   getLocale,
   setLocale,
