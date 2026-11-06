@@ -1,0 +1,18 @@
+{
+  "description": "Public RSS/Atom feeds configured for merge_items.py. Add only feeds you may fetch under the publisher's terms.",
+  "feeds": [
+    {
+      "id": "entsoe-site-rss",
+      "feed_url": "https://www.entsoe.eu/rss.xml",
+      "site_base_url": "https://www.entsoe.eu",
+      "default_country": "eu",
+      "default_tags": ["grid", "market-design"]
+    },
+    {
+      "id": "acer-media-rss",
+      "feed_url": "https://www.acer.europa.eu/media/rss.xml",
+      "default_country": "eu",
+      "default_tags": ["market-design", "balancing"]
+    }
+  ]
+}

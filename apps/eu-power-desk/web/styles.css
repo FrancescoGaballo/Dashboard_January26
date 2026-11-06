@@ -1,0 +1,245 @@
+:root {
+  --bg: #0c1116;
+  --panel: #121922;
+  --border: #223042;
+  --text: #e6edf3;
+  --muted: #8b9eb3;
+  --accent: #58a6ff;
+  --tag: #1f2e44;
+  --danger: #f85149;
+  --ok: #3fb950;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.45;
+  font-size: 15px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+header.site-header {
+  border-bottom: 1px solid var(--border);
+  background: rgba(12, 17, 22, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+}
+
+.header-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 14px 18px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-weight: 650;
+  letter-spacing: 0.02em;
+}
+
+nav.main-nav {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+nav.main-nav a {
+  color: var(--muted);
+}
+nav.main-nav a.active {
+  color: var(--text);
+  font-weight: 600;
+}
+
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 28px 18px 64px;
+}
+
+h1 {
+  font-size: 1.65rem;
+  font-weight: 650;
+  margin: 0 0 10px;
+}
+
+h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 32px 0 12px;
+}
+
+.lede {
+  color: var(--muted);
+  max-width: 72ch;
+  margin: 0 0 24px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin: 14px 0;
+}
+
+.country-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+.country-card {
+  display: block;
+  padding: 14px 14px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #0f1620;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.country-card:hover {
+  border-color: #2d4260;
+  transform: translateY(-1px);
+}
+.country-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+.country-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--tag);
+  color: #c8d5e6;
+  margin: 0 6px 4px 0;
+}
+
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  margin: 6px 0 8px;
+}
+
+.item-title {
+  font-weight: 600;
+  font-size: 1.02rem;
+  margin: 0 0 6px;
+}
+
+.item-summary {
+  margin: 0;
+  color: #c9d4e0;
+  font-size: 0.95rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  align-items: flex-end;
+  margin-bottom: 14px;
+}
+
+.filters label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+select,
+input[type="search"] {
+  background: #0f1620;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 7px 10px;
+  min-width: 180px;
+}
+
+button.btn {
+  background: #1f6feb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+button.btn.secondary {
+  background: #30363d;
+}
+
+.opportunity {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border);
+  font-size: 0.9rem;
+  color: #b0c4d8;
+}
+.opportunity strong {
+  color: #79c0ff;
+}
+
+.disclaimer {
+  margin-top: 40px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #402a2a;
+  background: #1b1414;
+  color: #e6c8c8;
+  font-size: 0.88rem;
+}
+
+footer.site-footer {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 18px 36px;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.badge-eu {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #8ec5ff;
+  border: 1px solid #2c4a72;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
+.empty {
+  color: var(--muted);
+  font-style: italic;
+}

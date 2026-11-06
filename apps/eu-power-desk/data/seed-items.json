@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Manual curated items merged with RSS by scripts/merge_items.py",
+  "items": [
+    {
+      "id": "seed-de-grid-2025-11-01",
+      "title": "Illustrative — Germany grid planning update (replace with a real item)",
+      "summary": "Placeholder entry showing the item shape. Replace with a sourced update from Bundesnetzagentur, the German TSOs, or ENTSO-E publications.",
+      "country": "de",
+      "tags": ["grid", "market-design"],
+      "published_at": "2025-11-01T09:00:00Z",
+      "source_name": "Curated seed (manual)",
+      "source_url": "https://www.bundesnetzagentur.de/",
+      "url": "https://www.bundesnetzagentur.de/",
+      "opportunity_note": "Grid hosting and upgrade timelines can change connection and utilisation risk for flex resources; verify in official filings.",
+      "is_sample": true
+    },
+    {
+      "id": "seed-it-lighter-2025-11-02",
+      "title": "Illustrative — Italy (lighter default coverage in MVP)",
+      "summary": "Italy remains in scope but the MVP uses shorter default copy unless expanded in data/countries.json and seed-items.",
+      "country": "it",
+      "tags": ["balancing", "market-design"],
+      "published_at": "2025-11-02T10:15:00Z",
+      "source_name": "Curated seed (manual)",
+      "source_url": "https://www.arera.it/",
+      "url": "https://www.arera.it/",
+      "opportunity_note": "Check AS/balancing evolution and gatekeeper processes; framing only—no site-specific advice.",
+      "is_sample": true
+    }
+  ]
+}

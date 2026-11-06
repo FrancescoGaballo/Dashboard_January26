@@ -1,0 +1,67 @@
+{
+  "countries": [
+    {
+      "slug": "eu",
+      "name": "EU & cross-border",
+      "headline": "ACER, ENTSO-E, EC network-code implementation, coupling and REMIT-adjacent developments",
+      "summary": "Use this bucket for items that apply across Member States or describe EU-level market architecture. RSS ingestion defaults many headlines here until you tag them to a Member State in `seed-items.json`.",
+      "bess_framing": "EU-level reforms (balancing, congestion tools, market coupling) change the boundary conditions for storage—but national implementation still dominates access rules."
+    },
+    {
+      "slug": "de",
+      "name": "Germany",
+      "headline": "Coupled wholesale markets, evolving grid and flexibility needs",
+      "summary": "Track Bundesnetzagentur decisions, TSO consultation (Amprion, 50Hertz, TenneT DE, TransnetBW), and EU network code implementation.",
+      "bess_framing": "Watch balancing product definitions, marginal flexibility procurement, and congestion-management rules that affect storage utilisation."
+    },
+    {
+      "slug": "fr",
+      "name": "France",
+      "headline": "Nuclear-heavy system with growing flexibility and market reform threads",
+      "summary": "CRE deliberations, RTE publications, and EU-level market design changes implemented nationally.",
+      "bess_framing": "Note rules for participation in balancing and reserve markets versus energy arbitrage constraints."
+    },
+    {
+      "slug": "es",
+      "name": "Spain",
+      "headline": "Renewable integration and reform of market/regulatory instruments",
+      "summary": "CNMC initiatives, REE operator materials, and Spanish implementation of EU electricity market rules.",
+      "bess_framing": "Assess AS markets, congestion, and any capacity or flexibility mechanisms—policy context only."
+    },
+    {
+      "slug": "ch",
+      "name": "Switzerland",
+      "headline": "Non-EU interconnectivity and domestic market rules",
+      "summary": "Swissgrid and ElCom publications; distinguish Swiss arrangements from EU market couplings.",
+      "bess_framing": "Cross-border availability and Swiss balancing participation rules are key watchpoints."
+    },
+    {
+      "slug": "pl",
+      "name": "Poland",
+      "headline": "Capacity and balancing reforms alongside integration with EU market architecture",
+      "summary": "URE decisions, PSE materials, and implementation of network codes.",
+      "bess_framing": "Follow ancillary service product design and access conditions for distributed flex."
+    },
+    {
+      "slug": "nordics",
+      "name": "Nordics (multi-area)",
+      "headline": "Nord Pool areas with zonal complexity (SE, NO, DK, FI)",
+      "summary": "Use explicit bidding zones when interpreting prices or constraints; follow Energinet, Fingrid, Statnett, Svenska kraftnät and Nord Pool notices.",
+      "bess_framing": "Local congestion and mFRR/balancing developments drive storage value; treat as policy signal not revenue forecast."
+    },
+    {
+      "slug": "uk",
+      "name": "United Kingdom",
+      "headline": "GB market separated from EU arrangements; own grid code and market reform path",
+      "summary": "Ofgem, National Grid ESO, and government consultations on market design and operability.",
+      "bess_framing": "Dynamic containment / regulation products and ancillary market reforms are central for storage participation routes."
+    },
+    {
+      "slug": "it",
+      "name": "Italy",
+      "headline": "MVP: lighter default coverage unless expanded",
+      "summary": "Short default copy in the MVP—deepen ARERA / Terna sources in `seed-items.json` when you want more detail here.",
+      "bess_framing": "High-level only in MVP: balancing gatekeeping and dispatch rules materially affect participation paths—verify in source docs."
+    }
+  ]
+}

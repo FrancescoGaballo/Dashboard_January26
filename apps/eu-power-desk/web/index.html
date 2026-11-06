@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EU Power Market Desk</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand">EU Power Market Desk</div>
+        <nav class="main-nav">
+          <a class="active" href="index.html">Home</a>
+          <a href="signals.html">Signals</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <h1>Regional snapshot</h1>
+      <p class="lede">
+        Curated <strong>news</strong> and <strong>important market-design and policy changes</strong>—with optional
+        <strong>battery storage (BESS)</strong> participation context (routes, enablers/blockers).
+        <strong>Not investment advice.</strong>
+      </p>
+      <section>
+        <h2>Regions &amp; countries</h2>
+        <div id="country-grid" class="country-grid"></div>
+      </section>
+      <section>
+        <h2>Recent signals (all regions)</h2>
+        <div id="recent-signals"></div>
+      </section>
+      <div class="disclaimer">
+        <strong>Disclaimer:</strong> This MVP aggregates public feeds and manual notes for personal research. It is not
+        legal, regulatory, or investment advice. Verify items at the original source.
+      </div>
+    </main>
+    <footer class="site-footer">Static MVP · Data from <code>web/data/items.json</code></footer>
+    <script src="app.js"></script>
+    <script>
+      async function initHome() {
+        const E = window.EUDesk;
+        await E.bootCommon();
+        const grid = document.getElementById("country-grid");
+        E.DATA.countries.countries.forEach((c) => {
+          const a = document.createElement("a");
+          a.className = "country-card";
+          a.href = "country.html?slug=" + encodeURIComponent(c.slug);
+          const badge = c.slug === "eu" ? '<span class="badge-eu">EU-wide</span>' : "";
+          a.innerHTML =
+            "<h3>" +
+            c.name +
+            badge +
+            "</h3><p>" +
+            (c.headline || "") +
+            "</p>";
+          grid.appendChild(a);
+        });
+
+        const recent = document.getElementById("recent-signals");
+        const items = (E.DATA.items.items || []).slice(0, 8);
+        if (!items.length) {
+          recent.appendChild(document.createElement("p")).className = "empty";
+          recent.querySelector("p").textContent = "No items yet — run python3 scripts/merge_items.py";
+        } else {
+          items.forEach((it) => recent.appendChild(E.renderItemCard(it)));
+        }
+      }
+      initHome().catch((err) => {
+        console.error(err);
+        const banner = document.createElement("div");
+        banner.className = "panel";
+        banner.textContent = "Failed to load data: " + err.message;
+        document.body.insertBefore(banner, document.body.firstChild);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Country — EU Power Market Desk</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand">EU Power Market Desk</div>
+        <nav class="main-nav">
+          <a href="index.html">Home</a>
+          <a href="signals.html">Signals</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main"></main>
+    <footer class="site-footer"><a href="index.html">← Back to regions</a></footer>
+    <script src="app.js"></script>
+    <script>
+      async function initCountry() {
+        const E = window.EUDesk;
+        await E.bootCommon();
+        const params = new URLSearchParams(window.location.search);
+        const slug = params.get("slug") || "";
+        const main = document.getElementById("main");
+
+        const country = E.DATA.countries.countries.find((x) => x.slug === slug);
+
+        if (!country) {
+          main.appendChild(document.createElement("h1")).textContent = "Region not found";
+          main.appendChild(document.createElement("p")).textContent =
+            "Use a valid ?slug= parameter (see Home).";
+          return;
+        }
+
+        document.title = country.name + " — EU Power Market Desk";
+
+        main.appendChild(document.createElement("h1")).textContent = country.name;
+        const lede = document.createElement("p");
+        lede.className = "lede";
+        lede.textContent = country.summary || "";
+        main.appendChild(lede);
+
+        const bess = document.createElement("div");
+        bess.className = "panel";
+        bess.innerHTML =
+          "<strong>Optional BESS lens (not advice)</strong><p class=\"item-summary\" style=\"margin:8px 0 0\">" +
+          (country.bess_framing || "") +
+          "</p>";
+        main.appendChild(bess);
+
+        main.appendChild(document.createElement("h2")).textContent = "Signals for this region";
+        const items = (E.DATA.items.items || []).filter((it) => (it.country || "") === slug);
+        if (!items.length) {
+          const p = document.createElement("p");
+          p.className = "empty";
+          p.innerHTML =
+            "No signals tagged for this region yet. Add entries in <code>data/seed-items.json</code> or adjust RSS defaults. " +
+            '<a href="signals.html">Open the full feed</a>.';
+          main.appendChild(p);
+        } else {
+          items.forEach((it) => main.appendChild(E.renderItemCard(it)));
+        }
+
+        const nav = document.createElement("p");
+        nav.className = "lede";
+        nav.innerHTML =
+          '<a href="signals.html?country=' +
+          encodeURIComponent(slug) +
+          '">Filter Signals for this region →</a>';
+        main.appendChild(nav);
+      }
+
+      initCountry().catch((err) => {
+        console.error(err);
+        document.getElementById("main").textContent = "Failed to load: " + err.message;
+      });
+    </script>
+  </body>
+</html>
