@@ -11,43 +11,51 @@
       <div class="header-inner">
         <div class="brand">EU Power Market Desk</div>
         <nav class="main-nav">
-          <a href="index.html">Home</a>
-          <a class="active" href="signals.html">Signals</a>
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a class="active" href="signals.html" data-i18n="nav.signals">Signals</a>
+          <label class="locale-picker">
+            <span data-i18n="nav.locale">UI</span>
+            <select id="locale-select" aria-label="UI language">
+              <option value="en" data-i18n="lang.en">English</option>
+              <option value="de" data-i18n="lang.de">Deutsch</option>
+              <option value="fr" data-i18n="lang.fr">Français</option>
+              <option value="es" data-i18n="lang.es">Español</option>
+              <option value="it" data-i18n="lang.it">Italiano</option>
+            </select>
+          </label>
         </nav>
       </div>
     </header>
     <main>
-      <h1>Signals feed</h1>
-      <p class="lede">
-        One consolidated stream with <strong>source</strong> and <strong>timestamp</strong>. Filter by region or tag.
-        EU-wide RSS items appear under <em>EU &amp; cross-border</em> until you duplicate/tag them manually for a country.
-      </p>
+      <h1 data-i18n="signals.title">Signals feed</h1>
+      <p class="lede" data-i18n="signals.lede"></p>
 
       <div class="panel">
         <div class="filters">
           <label>
-            Region
+            <span data-i18n="signals.filter.region">Region</span>
             <select id="f-country"></select>
           </label>
           <label>
-            Tag
+            <span data-i18n="signals.filter.tag">Tag</span>
             <select id="f-tag">
-              <option value="">All tags</option>
+              <option value="" data-i18n="signals.filter.tag_all">All tags</option>
             </select>
           </label>
-          <label style="flex: 1; min-width: 220px">
-            Search title / summary
-            <input type="search" id="f-q" placeholder="e.g. balancing, congestion…" />
+          <label>
+            <span data-i18n="signals.filter.lang">Language</span>
+            <select id="f-lang"></select>
           </label>
-          <button type="button" class="btn secondary" id="f-reset">Reset</button>
+          <label style="flex: 1; min-width: 220px">
+            <span data-i18n="signals.filter.search">Search title / summary</span>
+            <input type="search" id="f-q" data-i18n-placeholder="signals.search.placeholder" placeholder="e.g. balancing, congestion…" />
+          </label>
+          <button type="button" class="btn secondary" id="f-reset" data-i18n="signals.reset">Reset</button>
         </div>
         <div id="feed"></div>
       </div>
 
-      <div class="disclaimer">
-        <strong>Disclaimer:</strong> Aggregated machine-readable feeds may include events or news outside your focus —
-        tighten filters or rely on manual <code>seed-items.json</code> for curation.
-      </div>
+      <div class="disclaimer" data-i18n="signals.disclaimer"></div>
     </main>
     <footer class="site-footer">Signals · <a href="../data/PIPELINE.md">Pipeline docs</a> (repo)</footer>
     <script src="app.js"></script>
@@ -55,29 +63,71 @@
       async function initSignals() {
         const E = window.EUDesk;
         await E.bootCommon();
+        E.wireLocaleSelect(document.getElementById("locale-select"));
 
         const countrySel = document.getElementById("f-country");
         const tagSel = document.getElementById("f-tag");
+        const langSel = document.getElementById("f-lang");
         const qInput = document.getElementById("f-q");
         const feed = document.getElementById("feed");
 
-        countrySel.appendChild(new Option("All regions", ""));
-        E.DATA.countries.countries.forEach((c) => {
-          countrySel.appendChild(new Option(c.name, c.slug));
-        });
+        function regionAllLabel() {
+          return E.t("signals.filter.region_all");
+        }
 
-        const tagSet = new Set(E.TAG_SUGGESTIONS);
-        (E.DATA.items.items || []).forEach((it) => (it.tags || []).forEach((t) => tagSet.add(t)));
-        [...tagSet].sort().forEach((t) => tagSel.appendChild(new Option(t, t)));
+        function rebuildCountryOptions() {
+          const prev = countrySel.value;
+          countrySel.innerHTML = "";
+          countrySel.appendChild(new Option(regionAllLabel(), ""));
+          E.DATA.countries.countries.forEach((c) => {
+            countrySel.appendChild(new Option(c.name, c.slug));
+          });
+          const match = [...countrySel.options].some((o) => o.value === prev);
+          countrySel.value = match ? prev : "";
+        }
+
+        function rebuildTagOptions() {
+          const prev = tagSel.value;
+          const tagSet = new Set(E.TAG_SUGGESTIONS);
+          (E.DATA.items.items || []).forEach((it) => (it.tags || []).forEach((t) => tagSet.add(t)));
+          tagSel.innerHTML = "";
+          tagSel.appendChild(new Option(E.t("signals.filter.tag_all"), ""));
+          [...tagSet].sort().forEach((t) => tagSel.appendChild(new Option(t, t)));
+          const match = [...tagSel.options].some((o) => o.value === prev);
+          tagSel.value = match ? prev : "";
+        }
+
+        function rebuildLangOptions() {
+          const prev = langSel.value;
+          langSel.innerHTML = "";
+          langSel.appendChild(new Option(E.t("signals.filter.item_lang_all"), ""));
+          E.ACCEPT_LANGS.forEach((code) => {
+            langSel.appendChild(new Option(E.formatLanguage(code), code));
+          });
+          langSel.appendChild(new Option(E.t("signals.filter.lang_other"), "_unknown"));
+          const match = [...langSel.options].some((o) => o.value === prev);
+          langSel.value = match ? prev : "";
+        }
+
+        rebuildCountryOptions();
+        rebuildTagOptions();
+        rebuildLangOptions();
 
         function render() {
           feed.innerHTML = "";
           const c = countrySel.value;
           const t = tagSel.value;
+          const lang = langSel.value;
           const q = (qInput.value || "").trim().toLowerCase();
           const filtered = (E.DATA.items.items || []).filter((it) => {
             if (c && (it.country || "") !== c) return false;
             if (t && !(it.tags || []).includes(t)) return false;
+            const ilang = ((it.language || "") + "").trim().toLowerCase();
+            if (lang) {
+              if (lang === "_unknown") {
+                if (ilang && E.ACCEPT_LANGS.includes(ilang)) return false;
+              } else if (ilang !== lang) return false;
+            }
             if (!q) return true;
             const hay = ((it.title || "") + " " + (it.summary || "")).toLowerCase();
             return hay.includes(q);
@@ -85,7 +135,7 @@
           if (!filtered.length) {
             const p = document.createElement("p");
             p.className = "empty";
-            p.textContent = "No items match these filters.";
+            p.textContent = E.t("empty.no_match");
             feed.appendChild(p);
             return;
           }
@@ -94,11 +144,20 @@
 
         countrySel.addEventListener("change", render);
         tagSel.addEventListener("change", render);
+        langSel.addEventListener("change", render);
         qInput.addEventListener("input", render);
         document.getElementById("f-reset").addEventListener("click", () => {
           countrySel.value = "";
           tagSel.value = "";
+          langSel.value = "";
           qInput.value = "";
+          render();
+        });
+
+        window.addEventListener("eudesk-locale-change", () => {
+          rebuildCountryOptions();
+          rebuildTagOptions();
+          rebuildLangOptions();
           render();
         });
 

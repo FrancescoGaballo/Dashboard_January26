@@ -26,6 +26,22 @@ OUT.parent.mkdir(parents=True, exist_ok=True)
 
 USER_AGENT = "EUPowerMarketDesk/0.1 (+https://github.com/FrancescoGaballo/Dashboard_January26; merge_items)"
 
+DC_NS = "{http://purl.org/dc/elements/1.1/}"
+XML_NS = "{http://www.w3.org/XML/1998/namespace}"
+
+
+def _lang_primary(raw: str | None) -> str | None:
+    """Return BCP 47 primary subtag (lowercase) or None."""
+    if not raw:
+        return None
+    s = raw.strip().replace("_", "-")
+    if not s:
+        return None
+    primary = s.split("-", 1)[0].lower()
+    if len(primary) in (2, 3) and primary.isalpha():
+        return primary
+    return None
+
 
 def _iso_z(dt: datetime | None) -> str:
     if dt is None:
@@ -86,7 +102,9 @@ def parse_atom(root: ET.Element, feed_meta: dict[str, Any]) -> list[dict[str, An
     items: list[dict[str, Any]] = []
     default_country = feed_meta.get("default_country", "eu")
     default_tags: list[str] = feed_meta.get("default_tags") or []
+    default_lang = _lang_primary(feed_meta.get("language"))
     feed_title = _text(root.find("atom:title", ATOM_NS)) or feed_meta.get("id", "feed")
+    feed_lang = _lang_primary(root.get(XML_NS + "lang"))
 
     for entry in root.findall("atom:entry", ATOM_NS):
         title = _text(entry.find("atom:title", ATOM_NS))
@@ -114,20 +132,23 @@ def parse_atom(root: ET.Element, feed_meta: dict[str, Any]) -> list[dict[str, An
 
         tags = list(default_tags)
         item_id = _stable_id([guid, link, title])
+        entry_lang = _lang_primary(entry.get(XML_NS + "lang"))
+        item_lang = entry_lang or feed_lang or default_lang
 
-        items.append(
-            {
-                "id": item_id,
-                "title": title or "(Untitled)",
-                "summary": (summary or "")[:1200],
-                "country": default_country,
-                "tags": tags,
-                "published_at": published_at,
-                "source_name": feed_title,
-                "source_url": feed_meta.get("feed_url", ""),
-                "url": link,
-            }
-        )
+        entry_obj = {
+            "id": item_id,
+            "title": title or "(Untitled)",
+            "summary": (summary or "")[:1200],
+            "country": default_country,
+            "tags": tags,
+            "published_at": published_at,
+            "source_name": feed_title,
+            "source_url": feed_meta.get("feed_url", ""),
+            "url": link,
+        }
+        if item_lang:
+            entry_obj["language"] = item_lang
+        items.append(entry_obj)
     return items
 
 
@@ -135,10 +156,12 @@ def parse_rss(root: ET.Element, feed_meta: dict[str, Any]) -> list[dict[str, Any
     items: list[dict[str, Any]] = []
     default_country = feed_meta.get("default_country", "eu")
     default_tags: list[str] = feed_meta.get("default_tags") or []
+    default_lang = _lang_primary(feed_meta.get("language"))
     channel = root.find("channel")
     if channel is None:
         return items
     feed_title = _text(channel.find("title")) or feed_meta.get("id", "feed")
+    channel_lang = _lang_primary(_text(channel.find("language")))
 
     for elem in channel.findall("item"):
         title = _text(elem.find("title"))
@@ -157,19 +180,23 @@ def parse_rss(root: ET.Element, feed_meta: dict[str, Any]) -> list[dict[str, Any
         item_id = _stable_id([guid, link, title])
         tags = list(default_tags)
 
-        items.append(
-            {
-                "id": item_id,
-                "title": title or "(Untitled)",
-                "summary": summary[:1200],
-                "country": default_country,
-                "tags": tags,
-                "published_at": published_at,
-                "source_name": feed_title,
-                "source_url": feed_meta.get("feed_url", ""),
-                "url": link,
-            }
-        )
+        dc_lang = _lang_primary(_text(elem.find(DC_NS + "language")))
+        item_lang = dc_lang or channel_lang or default_lang
+
+        item_obj = {
+            "id": item_id,
+            "title": title or "(Untitled)",
+            "summary": summary[:1200],
+            "country": default_country,
+            "tags": tags,
+            "published_at": published_at,
+            "source_name": feed_title,
+            "source_url": feed_meta.get("feed_url", ""),
+            "url": link,
+        }
+        if item_lang:
+            item_obj["language"] = item_lang
+        items.append(item_obj)
     return items
 
 

@@ -11,67 +11,99 @@
       <div class="header-inner">
         <div class="brand">EU Power Market Desk</div>
         <nav class="main-nav">
-          <a href="index.html">Home</a>
-          <a href="signals.html">Signals</a>
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="signals.html" data-i18n="nav.signals">Signals</a>
+          <label class="locale-picker">
+            <span data-i18n="nav.locale">UI</span>
+            <select id="locale-select" aria-label="UI language">
+              <option value="en" data-i18n="lang.en">English</option>
+              <option value="de" data-i18n="lang.de">Deutsch</option>
+              <option value="fr" data-i18n="lang.fr">Français</option>
+              <option value="es" data-i18n="lang.es">Español</option>
+              <option value="it" data-i18n="lang.it">Italiano</option>
+            </select>
+          </label>
         </nav>
       </div>
     </header>
     <main id="main"></main>
-    <footer class="site-footer"><a href="index.html">← Back to regions</a></footer>
+    <footer class="site-footer"><a href="index.html" data-i18n="country.back">← Back to regions</a></footer>
     <script src="app.js"></script>
     <script>
       async function initCountry() {
         const E = window.EUDesk;
         await E.bootCommon();
-        const params = new URLSearchParams(window.location.search);
-        const slug = params.get("slug") || "";
+        E.wireLocaleSelect(document.getElementById("locale-select"));
+
         const main = document.getElementById("main");
+        const slug = E.qs("slug") || "";
 
-        const country = E.DATA.countries.countries.find((x) => x.slug === slug);
+        function render() {
+          main.innerHTML = "";
+          const country = E.DATA.countries.countries.find((x) => x.slug === slug);
 
-        if (!country) {
-          main.appendChild(document.createElement("h1")).textContent = "Region not found";
-          main.appendChild(document.createElement("p")).textContent =
-            "Use a valid ?slug= parameter (see Home).";
-          return;
+          if (!country) {
+            document.title = "EU Power Market Desk";
+            main.appendChild(document.createElement("h1")).textContent = E.t("country.not_found_title");
+            main.appendChild(document.createElement("p")).textContent = E.t("country.not_found_body");
+            return;
+          }
+
+          document.title = country.name + " — EU Power Market Desk";
+
+          main.appendChild(document.createElement("h1")).textContent = country.name;
+          const lede = document.createElement("p");
+          lede.className = "lede";
+          lede.textContent = country.summary || "";
+          main.appendChild(lede);
+
+          const bess = document.createElement("div");
+          bess.className = "panel";
+          const bh = document.createElement("strong");
+          bh.setAttribute("data-i18n", "country.bess_heading");
+          bh.textContent = E.t("country.bess_heading");
+          const bp = document.createElement("p");
+          bp.className = "item-summary";
+          bp.style.marginTop = "8px";
+          bp.textContent = country.bess_framing || "";
+          bess.appendChild(bh);
+          bess.appendChild(bp);
+          main.appendChild(bess);
+
+          const h2 = document.createElement("h2");
+          h2.setAttribute("data-i18n", "country.signals_for");
+          h2.textContent = E.t("country.signals_for");
+          main.appendChild(h2);
+
+          const items = (E.DATA.items.items || []).filter((it) => (it.country || "") === slug);
+          if (!items.length) {
+            const wrap = document.createElement("p");
+            wrap.className = "empty";
+            wrap.appendChild(document.createTextNode(E.t("country.no_items") + " "));
+            const a = document.createElement("a");
+            a.href = "signals.html";
+            a.setAttribute("data-i18n", "country.open_full_feed");
+            a.textContent = E.t("country.open_full_feed");
+            wrap.appendChild(a);
+            main.appendChild(wrap);
+          } else {
+            items.forEach((it) => main.appendChild(E.renderItemCard(it)));
+          }
+
+          const nav = document.createElement("p");
+          nav.className = "lede";
+          const filter = document.createElement("a");
+          filter.href = "signals.html?country=" + encodeURIComponent(slug);
+          filter.setAttribute("data-i18n", "country.filter_signals");
+          filter.textContent = E.t("country.filter_signals");
+          nav.appendChild(filter);
+          main.appendChild(nav);
+
+          E.applyDomTranslations(main);
         }
 
-        document.title = country.name + " — EU Power Market Desk";
-
-        main.appendChild(document.createElement("h1")).textContent = country.name;
-        const lede = document.createElement("p");
-        lede.className = "lede";
-        lede.textContent = country.summary || "";
-        main.appendChild(lede);
-
-        const bess = document.createElement("div");
-        bess.className = "panel";
-        bess.innerHTML =
-          "<strong>Optional BESS lens (not advice)</strong><p class=\"item-summary\" style=\"margin:8px 0 0\">" +
-          (country.bess_framing || "") +
-          "</p>";
-        main.appendChild(bess);
-
-        main.appendChild(document.createElement("h2")).textContent = "Signals for this region";
-        const items = (E.DATA.items.items || []).filter((it) => (it.country || "") === slug);
-        if (!items.length) {
-          const p = document.createElement("p");
-          p.className = "empty";
-          p.innerHTML =
-            "No signals tagged for this region yet. Add entries in <code>data/seed-items.json</code> or adjust RSS defaults. " +
-            '<a href="signals.html">Open the full feed</a>.';
-          main.appendChild(p);
-        } else {
-          items.forEach((it) => main.appendChild(E.renderItemCard(it)));
-        }
-
-        const nav = document.createElement("p");
-        nav.className = "lede";
-        nav.innerHTML =
-          '<a href="signals.html?country=' +
-          encodeURIComponent(slug) +
-          '">Filter Signals for this region →</a>';
-        main.appendChild(nav);
+        render();
+        window.addEventListener("eudesk-locale-change", render);
       }
 
       initCountry().catch((err) => {

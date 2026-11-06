@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T13:50:31Z",
+  "generated_at": "2026-11-06T13:54:43Z",
   "items": [
     {
       "id": "rss-96f9949e1df63a6d",
@@ -13,7 +13,8 @@
       "published_at": "2027-05-24T12:00:33Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/events/2027/05/24/entso-e-s-2027-standard-vetting-interoperability-test-event/"
+      "url": "https://www.entsoe.eu/events/2027/05/24/entso-e-s-2027-standard-vetting-interoperability-test-event/",
+      "language": "en"
     },
     {
       "id": "rss-66010014ed9dc1b4",
@@ -27,7 +28,8 @@
       "published_at": "2026-11-20T09:30:22Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/events/2026/11/20/market-design-options-for-congestion-management-stakeholder-workshop/"
+      "url": "https://www.entsoe.eu/events/2026/11/20/market-design-options-for-congestion-management-stakeholder-workshop/",
+      "language": "en"
     },
     {
       "id": "rss-8acf8b95c52ad2db",
@@ -41,7 +43,8 @@
       "published_at": "2026-11-02T23:00:00Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/11/03/entso-e-report-sets-out-europe-s-transmission-investment-needs-to-2035/"
+      "url": "https://www.entsoe.eu/news/2026/11/03/entso-e-report-sets-out-europe-s-transmission-investment-needs-to-2035/",
+      "language": "en"
     },
     {
       "id": "rss-fd7c79f219f8fec0",
@@ -55,7 +58,8 @@
       "published_at": "2026-10-28T10:00:26Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/events/2026/10/28/balancing-stakeholders-workshop/"
+      "url": "https://www.entsoe.eu/events/2026/10/28/balancing-stakeholders-workshop/",
+      "language": "en"
     },
     {
       "id": "rss-e317ad46df336ca3",
@@ -69,7 +73,8 @@
       "published_at": "2026-10-22T06:22:50Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/10/22/entso-e-strategy-a-new-roadmap-for-europes-power-system/"
+      "url": "https://www.entsoe.eu/news/2026/10/22/entso-e-strategy-a-new-roadmap-for-europes-power-system/",
+      "language": "en"
     },
     {
       "id": "rss-bd8a45785b64822c",
@@ -83,7 +88,8 @@
       "published_at": "2026-10-08T14:26:09Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/10/08/new-entso-e-reports-map-how-transmission-costs-are-recovered-across-europe/"
+      "url": "https://www.entsoe.eu/news/2026/10/08/new-entso-e-reports-map-how-transmission-costs-are-recovered-across-europe/",
+      "language": "en"
     },
     {
       "id": "rss-2c5e4ddfda2f3b43",
@@ -97,7 +103,8 @@
       "published_at": "2026-10-07T08:50:17Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/events/2026/10/07/the-economist-energy-grid-intelligence-summit/"
+      "url": "https://www.entsoe.eu/events/2026/10/07/the-economist-energy-grid-intelligence-summit/",
+      "language": "en"
     },
     {
       "id": "rss-ab60a688abc9c88f",
@@ -111,7 +118,8 @@
       "published_at": "2026-10-01T14:00:07Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/events/2026/10/01/entso-e-entsog-and-ennoh-invite-you-to-the-tyndp2028-scenario-kick-off-workshop/"
+      "url": "https://www.entsoe.eu/events/2026/10/01/entso-e-entsog-and-ennoh-invite-you-to-the-tyndp2028-scenario-kick-off-workshop/",
+      "language": "en"
     },
     {
       "id": "rss-2fba204cd7287157",
@@ -125,7 +133,8 @@
       "published_at": "2026-09-28T12:16:30Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/09/28/unlocking-electrification-entso-e-position-on-the-future-proof-electricity-bills-proposal/"
+      "url": "https://www.entsoe.eu/news/2026/09/28/unlocking-electrification-entso-e-position-on-the-future-proof-electricity-bills-proposal/",
+      "language": "en"
     },
     {
       "id": "rss-e0dfa2892f25d13c",
@@ -139,7 +148,8 @@
       "published_at": "2026-09-25T15:00:58Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/events/2026/09/25/annual-work-programme-2027-webinar/"
+      "url": "https://www.entsoe.eu/events/2026/09/25/annual-work-programme-2027-webinar/",
+      "language": "en"
     },
     {
       "id": "rss-1f62be3eb13840b3",
@@ -153,7 +163,8 @@
       "published_at": "2026-09-15T08:01:12Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/09/15/delivering-on-the-electrification-action-plan-investment-in-grids-flexibility-and-faster-connections-will-drive-step-change/"
+      "url": "https://www.entsoe.eu/news/2026/09/15/delivering-on-the-electrification-action-plan-investment-in-grids-flexibility-and-faster-connections-will-drive-step-change/",
+      "language": "en"
     },
     {
       "id": "rss-1eda091074a154b6",
@@ -167,7 +178,8 @@
       "published_at": "2026-08-31T11:11:44Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/08/31/entso-e-releases-position-paper-on-the-security-of-critical-infrastructure/"
+      "url": "https://www.entsoe.eu/news/2026/08/31/entso-e-releases-position-paper-on-the-security-of-critical-infrastructure/",
+      "language": "en"
     },
     {
       "id": "rss-c24a106e121751c2",
@@ -181,7 +193,8 @@
       "published_at": "2026-08-07T16:23:23Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/08/07/transmission-system-operators-prepare-for-solar-eclipse-to-ensure-secure-system-operation/"
+      "url": "https://www.entsoe.eu/news/2026/08/07/transmission-system-operators-prepare-for-solar-eclipse-to-ensure-secure-system-operation/",
+      "language": "en"
     },
     {
       "id": "rss-f3db8f9c4a8e0924",
@@ -195,7 +208,8 @@
       "published_at": "2026-07-29T14:00:07Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/events/2026/07/29/entso-e-and-entsog-are-pleased-to-invite-you-to-a-public-webinar-presenting-the-draft-tyndp-2026-scenarios/"
+      "url": "https://www.entsoe.eu/events/2026/07/29/entso-e-and-entsog-are-pleased-to-invite-you-to-a-public-webinar-presenting-the-draft-tyndp-2026-scenarios/",
+      "language": "en"
     },
     {
       "id": "rss-650a1762ef32e47f",
@@ -209,7 +223,8 @@
       "published_at": "2026-07-23T13:03:48Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/07/23/future-proof-power-grids-future-proof-bills-unlocking-the-full-value-of-electrification/"
+      "url": "https://www.entsoe.eu/news/2026/07/23/future-proof-power-grids-future-proof-bills-unlocking-the-full-value-of-electrification/",
+      "language": "en"
     },
     {
       "id": "rss-5861125fe90a0bf6",
@@ -223,7 +238,8 @@
       "published_at": "2026-07-06T08:12:19Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/07/06/new-entso-e-report-provides-recommendations-to-enhance-stability-in-the-european-grid/"
+      "url": "https://www.entsoe.eu/news/2026/07/06/new-entso-e-report-provides-recommendations-to-enhance-stability-in-the-european-grid/",
+      "language": "en"
     },
     {
       "id": "rss-23a13130083814fc",
@@ -237,7 +253,8 @@
       "published_at": "2026-07-01T14:00:08Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/events/2026/07/01/eraa-2026-stakeholder-webinar-methodology/"
+      "url": "https://www.entsoe.eu/events/2026/07/01/eraa-2026-stakeholder-webinar-methodology/",
+      "language": "en"
     },
     {
       "id": "rss-ad5bd8f20c0da103",
@@ -251,7 +268,8 @@
       "published_at": "2026-06-30T09:30:42Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/events/2026/06/30/entso-e-market-and-balancing-reports-2026-webinar/"
+      "url": "https://www.entsoe.eu/events/2026/06/30/entso-e-market-and-balancing-reports-2026-webinar/",
+      "language": "en"
     },
     {
       "id": "rss-ce54703d0e502e88",
@@ -265,7 +283,8 @@
       "published_at": "2026-06-29T11:54:51Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/06/29/new-entso-e-reports-highlight-significant-progress-in-european-electricity-market-integration/"
+      "url": "https://www.entsoe.eu/news/2026/06/29/new-entso-e-reports-highlight-significant-progress-in-european-electricity-market-integration/",
+      "language": "en"
     },
     {
       "id": "rss-f35780368f7fab21",
@@ -279,7 +298,8 @@
       "published_at": "2026-06-26T07:33:51Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/06/26/4-july-2025-grid-incident-in-the-czech-republic-expert-panel-releases-final-report/"
+      "url": "https://www.entsoe.eu/news/2026/06/26/4-july-2025-grid-incident-in-the-czech-republic-expert-panel-releases-final-report/",
+      "language": "en"
     },
     {
       "id": "rss-2f406af186b8e025",
@@ -293,7 +313,8 @@
       "published_at": "2026-06-25T09:00:48Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/06/25/towards-a-more-resilient-and-integrated-electricity-system-dso-entity-and-entso-e-launch-platform-for-joint-initiatives-alongside-annual-work-plan/"
+      "url": "https://www.entsoe.eu/news/2026/06/25/towards-a-more-resilient-and-integrated-electricity-system-dso-entity-and-entso-e-launch-platform-for-joint-initiatives-alongside-annual-work-plan/",
+      "language": "en"
     },
     {
       "id": "rss-41129e9bcacec360",
@@ -307,7 +328,8 @@
       "published_at": "2026-06-23T10:00:55Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/events/2026/06/23/data-centres-and-the-power-system-expected-trends-challenges-and-opportunities/"
+      "url": "https://www.entsoe.eu/events/2026/06/23/data-centres-and-the-power-system-expected-trends-challenges-and-opportunities/",
+      "language": "en"
     },
     {
       "id": "rss-34c83d67ebced3b1",
@@ -321,7 +343,8 @@
       "published_at": "2026-06-11T11:14:36Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/06/11/entso-e-and-entsog-release-their-joint-draft-scenarios-for-tyndp-2026/"
+      "url": "https://www.entsoe.eu/news/2026/06/11/entso-e-and-entsog-release-their-joint-draft-scenarios-for-tyndp-2026/",
+      "language": "en"
     },
     {
       "id": "rss-8acb5d1b9d36ba5d",
@@ -335,7 +358,8 @@
       "published_at": "2026-06-01T14:49:41Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/06/01/from-baltic-synchronisation-to-grid-innovation-entso-e-annual-report-2025/"
+      "url": "https://www.entsoe.eu/news/2026/06/01/from-baltic-synchronisation-to-grid-innovation-entso-e-annual-report-2025/",
+      "language": "en"
     },
     {
       "id": "rss-4a34cd640285feac",
@@ -349,7 +373,8 @@
       "published_at": "2026-05-29T14:00:28Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/events/2026/05/29/summer-outlook-2026-joint-entso-e-and-entsog-webinar/"
+      "url": "https://www.entsoe.eu/events/2026/05/29/summer-outlook-2026-joint-entso-e-and-entsog-webinar/",
+      "language": "en"
     },
     {
       "id": "rss-bfc3d7baaae52df5",
@@ -363,7 +388,8 @@
       "published_at": "2026-05-29T09:57:31Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/05/29/entso-e-releases-2026-summer-outlook-report/"
+      "url": "https://www.entsoe.eu/news/2026/05/29/entso-e-releases-2026-summer-outlook-report/",
+      "language": "en"
     },
     {
       "id": "rss-831f1aafae724279",
@@ -377,7 +403,8 @@
       "published_at": "2026-05-22T10:25:12Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/05/22/entso-e-and-dso-entity-launched-capacitypedia-to-improve-access-to-grid-hosting-capacity-information-across-europe/"
+      "url": "https://www.entsoe.eu/news/2026/05/22/entso-e-and-dso-entity-launched-capacitypedia-to-improve-access-to-grid-hosting-capacity-information-across-europe/",
+      "language": "en"
     },
     {
       "id": "rss-6703379c87ddb62d",
@@ -391,7 +418,8 @@
       "published_at": "2026-05-21T14:53:40Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/05/21/dso-tso-collaboration-the-network-planning-joint-report-was-shared-during-the-12th-energy-infrastructure-forum/"
+      "url": "https://www.entsoe.eu/news/2026/05/21/dso-tso-collaboration-the-network-planning-joint-report-was-shared-during-the-12th-energy-infrastructure-forum/",
+      "language": "en"
     },
     {
       "id": "rss-965afb40538b60f6",
@@ -405,7 +433,8 @@
       "published_at": "2026-05-11T13:01:48Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/events/2026/05/11/entso-e-s-2026-standard-vetting-interoperability-test-event/"
+      "url": "https://www.entsoe.eu/events/2026/05/11/entso-e-s-2026-standard-vetting-interoperability-test-event/",
+      "language": "en"
     },
     {
       "id": "rss-11870d92aede0398",
@@ -419,7 +448,8 @@
       "published_at": "2026-05-08T08:04:07Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/05/08/from-energy-demand-to-grid-support-entso-e-explores-data-centres-dual-role/"
+      "url": "https://www.entsoe.eu/news/2026/05/08/from-energy-demand-to-grid-support-entso-e-explores-data-centres-dual-role/",
+      "language": "en"
     },
     {
       "id": "rss-7c893017b94391a4",
@@ -433,7 +463,8 @@
       "published_at": "2026-04-28T11:55:07Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/04/28/advancing-on-cross-sector-system-planning-entso-e-and-entso-g-submit-interlinked-modelling-report/"
+      "url": "https://www.entsoe.eu/news/2026/04/28/advancing-on-cross-sector-system-planning-entso-e-and-entso-g-submit-interlinked-modelling-report/",
+      "language": "en"
     },
     {
       "id": "rss-7eea5a541bee027c",
@@ -447,7 +478,8 @@
       "published_at": "2026-04-20T08:59:32Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/04/20/entso-e-publishes-expert-panel-final-report-on-18-may-2025-blackout-in-north-macedonia/"
+      "url": "https://www.entsoe.eu/news/2026/04/20/entso-e-publishes-expert-panel-final-report-on-18-may-2025-blackout-in-north-macedonia/",
+      "language": "en"
     },
     {
       "id": "rss-e119a3838ad744f3",
@@ -461,7 +493,8 @@
       "published_at": "2026-04-14T17:20:07Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/04/14/2026-european-grids-summit-a-celebration-of-the-role-of-grids-in-europe-s-future/"
+      "url": "https://www.entsoe.eu/news/2026/04/14/2026-european-grids-summit-a-celebration-of-the-role-of-grids-in-europe-s-future/",
+      "language": "en"
     },
     {
       "id": "rss-d851fb684f5e9245",
@@ -475,7 +508,8 @@
       "published_at": "2026-04-14T13:12:54Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/04/14/market-committee-approves-itc-audit-results-and-2026-perimeter-fee/"
+      "url": "https://www.entsoe.eu/news/2026/04/14/market-committee-approves-itc-audit-results-and-2026-perimeter-fee/",
+      "language": "en"
     },
     {
       "id": "rss-544b0833c203e4ad",
@@ -489,7 +523,8 @@
       "published_at": "2026-04-14T11:30:03Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/events/2026/04/14/european-grids-summit-2026/"
+      "url": "https://www.entsoe.eu/events/2026/04/14/european-grids-summit-2026/",
+      "language": "en"
     },
     {
       "id": "rss-68bc24497f72e124",
@@ -503,7 +538,8 @@
       "published_at": "2026-04-10T14:09:36Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/04/10/recent-public-statements-in-the-turkish-turkish-cypriot-media-regarding-an-additional-electricity-interconnection-project-with-the-republic-of-cyprus/"
+      "url": "https://www.entsoe.eu/news/2026/04/10/recent-public-statements-in-the-turkish-turkish-cypriot-media-regarding-an-additional-electricity-interconnection-project-with-the-republic-of-cyprus/",
+      "language": "en"
     },
     {
       "id": "rss-ef9058a15217ca61",
@@ -517,7 +553,8 @@
       "published_at": "2026-04-02T11:58:53Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/04/02/tyndp-2026-project-portfolio-expands-further-to-199-transmission-and-69-storage-project/"
+      "url": "https://www.entsoe.eu/news/2026/04/02/tyndp-2026-project-portfolio-expands-further-to-199-transmission-and-69-storage-project/",
+      "language": "en"
     },
     {
       "id": "rss-e120d450e590ece4",
@@ -531,7 +568,8 @@
       "published_at": "2026-04-02T11:29:21Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/events/2026/04/02/entso-e-and-dso-entity-joint-webinar-on-digital-twin-use-cases-for-tso-dso-cooperation/"
+      "url": "https://www.entsoe.eu/events/2026/04/02/entso-e-and-dso-entity-joint-webinar-on-digital-twin-use-cases-for-tso-dso-cooperation/",
+      "language": "en"
     },
     {
       "id": "rss-b244d2d8b5fde899",
@@ -545,7 +583,8 @@
       "published_at": "2026-03-27T14:00:40Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/events/2026/03/27/tyndp-2026-identification-of-system-needs-methodology-stakeholders-webinar/"
+      "url": "https://www.entsoe.eu/events/2026/03/27/tyndp-2026-identification-of-system-needs-methodology-stakeholders-webinar/",
+      "language": "en"
     },
     {
       "id": "rss-337e8d3580e1d4a4",
@@ -559,7 +598,8 @@
       "published_at": "2026-03-25T16:07:21Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/03/25/commission-s-clean-energy-investment-strategy/"
+      "url": "https://www.entsoe.eu/news/2026/03/25/commission-s-clean-energy-investment-strategy/",
+      "language": "en"
     },
     {
       "id": "rss-a9fa271c09eb9652",
@@ -573,7 +613,8 @@
       "published_at": "2026-03-20T08:05:18Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/03/20/entso-e-publishes-expert-panel-final-report-on-28-april-2025-blackout-in-spain-and-portugal/"
+      "url": "https://www.entsoe.eu/news/2026/03/20/entso-e-publishes-expert-panel-final-report-on-28-april-2025-blackout-in-spain-and-portugal/",
+      "language": "en"
     },
     {
       "id": "rss-6ff2767ef2faf539",
@@ -587,7 +628,8 @@
       "published_at": "2026-03-18T11:00:49Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/events/2026/03/18/webinar-shaping-the-2026-cycle-of-the-dso-tso-technopedia/"
+      "url": "https://www.entsoe.eu/events/2026/03/18/webinar-shaping-the-2026-cycle-of-the-dso-tso-technopedia/",
+      "language": "en"
     },
     {
       "id": "rss-1190ef21d999a36c",
@@ -601,7 +643,8 @@
       "published_at": "2026-03-13T12:24:35Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/03/13/entso-e-shares-recommendations-for-the-european-commission-s-update-of-the-energy-union-governance-regulation/"
+      "url": "https://www.entsoe.eu/news/2026/03/13/entso-e-shares-recommendations-for-the-european-commission-s-update-of-the-energy-union-governance-regulation/",
+      "language": "en"
     },
     {
       "id": "rss-6d258a6344227f6e",
@@ -615,7 +658,8 @@
       "published_at": "2026-03-04T12:31:53Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/03/04/entso-e-advocates-for-space-enabled-resilience-in-europe-s-electricity-system/"
+      "url": "https://www.entsoe.eu/news/2026/03/04/entso-e-advocates-for-space-enabled-resilience-in-europe-s-electricity-system/",
+      "language": "en"
     },
     {
       "id": "rss-79e91b92b5ef9877",
@@ -629,7 +673,8 @@
       "published_at": "2026-02-26T09:54:11Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/02/26/entso-e-releases-public-consultation-on-the-system-needs-methodology/"
+      "url": "https://www.entsoe.eu/news/2026/02/26/entso-e-releases-public-consultation-on-the-system-needs-methodology/",
+      "language": "en"
     },
     {
       "id": "rss-1b1f40f519dcc66a",
@@ -643,7 +688,8 @@
       "published_at": "2026-02-25T11:00:34Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/events/2026/02/25/eraa-2026-stakeholder-webinar-preliminary-input-data/"
+      "url": "https://www.entsoe.eu/events/2026/02/25/eraa-2026-stakeholder-webinar-preliminary-input-data/",
+      "language": "en"
     },
     {
       "id": "rss-c70c430dcfc51c0d",
@@ -657,7 +703,8 @@
       "published_at": "2026-02-20T14:27:10Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/02/20/entso-e-publishes-a-report-on-the-benefits-of-a-coordinated-approach-to-digital-twins-for-the-european-power-system/"
+      "url": "https://www.entsoe.eu/news/2026/02/20/entso-e-publishes-a-report-on-the-benefits-of-a-coordinated-approach-to-digital-twins-for-the-european-power-system/",
+      "language": "en"
     },
     {
       "id": "rss-9c0eb0af9c3914e3",
@@ -671,7 +718,8 @@
       "published_at": "2026-02-20T13:27:40Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/02/20/entso-e-and-dso-entity-release-a-joint-statement-on-public-procurement/"
+      "url": "https://www.entsoe.eu/news/2026/02/20/entso-e-and-dso-entity-release-a-joint-statement-on-public-procurement/",
+      "language": "en"
     },
     {
       "id": "rss-a43be6abc276b127",
@@ -685,7 +733,8 @@
       "published_at": "2026-02-05T10:30:50Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/02/05/entso-e-publishes-technical-report-instability-detection-technologies-in-power-electronics-dominated-systems/"
+      "url": "https://www.entsoe.eu/news/2026/02/05/entso-e-publishes-technical-report-instability-detection-technologies-in-power-electronics-dominated-systems/",
+      "language": "en"
     },
     {
       "id": "rss-723b03eeb46f2c00",
@@ -699,7 +748,8 @@
       "published_at": "2026-02-05T10:08:57Z",
       "source_name": "ENTSO-E News & Updates",
       "source_url": "https://www.entsoe.eu/rss.xml",
-      "url": "https://www.entsoe.eu/news/2026/02/05/power-system-incident-in-ukraine-and-moldova/"
+      "url": "https://www.entsoe.eu/news/2026/02/05/power-system-incident-in-ukraine-and-moldova/",
+      "language": "en"
     },
     {
       "id": "seed-it-lighter-2025-11-02",
@@ -710,6 +760,7 @@
         "balancing",
         "market-design"
       ],
+      "language": "en",
       "published_at": "2025-11-02T10:15:00Z",
       "source_name": "Curated seed (manual)",
       "source_url": "https://www.arera.it/",
@@ -725,6 +776,7 @@
         "grid",
         "market-design"
       ],
+      "language": "en",
       "published_at": "2025-11-01T09:00:00Z",
       "source_name": "Curated seed (manual)",
       "source_url": "https://www.bundesnetzagentur.de/",
