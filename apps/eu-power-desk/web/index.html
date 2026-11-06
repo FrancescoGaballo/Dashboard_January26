@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EU Power Market Desk</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand">EU Power Market Desk</div>
+        <nav class="main-nav">
+          <a class="active" href="index.html" data-i18n="nav.home">Home</a>
+          <a href="signals.html" data-i18n="nav.signals">Signals</a>
+          <label class="locale-picker">
+            <span data-i18n="nav.locale">UI</span>
+            <select id="locale-select" aria-label="UI language">
+              <option value="en" data-i18n="lang.en">English</option>
+              <option value="de" data-i18n="lang.de">Deutsch</option>
+              <option value="fr" data-i18n="lang.fr">Français</option>
+              <option value="es" data-i18n="lang.es">Español</option>
+              <option value="it" data-i18n="lang.it">Italiano</option>
+            </select>
+          </label>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <h1 data-i18n="home.title">Regional snapshot</h1>
+      <p class="lede" data-i18n="home.lede">
+        Curated <strong>news</strong> and <strong>important market-design and policy changes</strong>—with optional
+        <strong>battery storage (BESS)</strong> participation context (routes, enablers/blockers).
+        <strong>Not investment advice.</strong>
+      </p>
+      <section>
+        <h2 data-i18n="home.regions">Regions &amp; countries</h2>
+        <div id="country-grid" class="country-grid"></div>
+      </section>
+      <section>
+        <h2 data-i18n="home.recent">Recent signals (all regions)</h2>
+        <div id="recent-signals"></div>
+      </section>
+      <div class="disclaimer" data-i18n="home.disclaimer"></div>
+    </main>
+    <footer class="site-footer">Static MVP · Data from <code>web/data/items.json</code></footer>
+    <script src="app.js"></script>
+    <script>
+      async function initHome() {
+        const E = window.EUDesk;
+        await E.bootCommon();
+        E.wireLocaleSelect(document.getElementById("locale-select"));
+        const grid = document.getElementById("country-grid");
+        E.DATA.countries.countries.forEach((c) => {
+          const a = document.createElement("a");
+          a.className = "country-card";
+          a.href = "country.html?slug=" + encodeURIComponent(c.slug);
+          const badge = c.slug === "eu" ? '<span class="badge-eu">EU-wide</span>' : "";
+          a.innerHTML =
+            "<h3>" +
+            c.name +
+            badge +
+            "</h3><p>" +
+            (c.headline || "") +
+            "</p>";
+          grid.appendChild(a);
+        });
+
+        const recent = document.getElementById("recent-signals");
+        const items = (E.DATA.items.items || []).slice(0, 8);
+        if (!items.length) {
+          recent.appendChild(document.createElement("p")).className = "empty";
+          recent.querySelector("p").textContent = E.t("empty.no_signals_merge");
+        } else {
+          items.forEach((it) => recent.appendChild(E.renderItemCard(it)));
+        }
+
+        function rerenderRecent() {
+          recent.innerHTML = "";
+          const latest = (E.DATA.items.items || []).slice(0, 8);
+          if (!latest.length) {
+            const p = document.createElement("p");
+            p.className = "empty";
+            p.textContent = E.t("empty.no_signals_merge");
+            recent.appendChild(p);
+            return;
+          }
+          latest.forEach((it) => recent.appendChild(E.renderItemCard(it)));
+        }
+
+        window.addEventListener("eudesk-locale-change", rerenderRecent);
+      }
+      initHome().catch((err) => {
+        console.error(err);
+        const banner = document.createElement("div");
+        banner.className = "panel";
+        banner.textContent = "Failed to load data: " + err.message;
+        document.body.insertBefore(banner, document.body.firstChild);
+      });
+    </script>
+  </body>
+</html>

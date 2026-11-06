@@ -1,0 +1,76 @@
+{
+  "countries": [
+    {
+      "slug": "eu",
+      "name": "EU & cross-border",
+      "headline": "ACER, ENTSO-E, EC network-code implementation, coupling and REMIT-adjacent developments",
+      "summary": "Use this bucket for items that apply across Member States or describe EU-level market architecture. RSS ingestion defaults many headlines here until you tag them to a Member State in `seed-items.json`.",
+      "developer_conditions": "Track EU-level **RES support** (auctions, State aid/CfD conversations), **storage** eligibility in market/network codes, **grid / UoS** charging principles, **levies** on bills, and **gas / energy retail** measures that shift pass-throughs. Note **proposal vs adopted** texts.",
+      "bess_framing": "EU-level reforms (balancing, congestion tools, market coupling) change the boundary conditions for storage—but national implementation still dominates access rules."
+    },
+    {
+      "slug": "de",
+      "name": "Germany",
+      "headline": "Coupled wholesale markets, evolving grid and flexibility needs",
+      "summary": "Track Bundesnetzagentur decisions, TSO consultation (Amprion, 50Hertz, TenneT DE, TransnetBW), and EU network code implementation.",
+      "developer_conditions": "Watch **EEG / RES support** and tariff rules, **BESS** consultations (co-located vs standalone), **grid permits / connection** timelines, **UoS and charges**, **taxes/levies** on bills, and any **gas / end-user tariff** measures that move pass-throughs. Separate **proposal vs adopted** BNetzA/BMWK texts.",
+      "bess_framing": "Watch balancing product definitions, marginal flexibility procurement, and congestion-management rules that affect storage utilisation."
+    },
+    {
+      "slug": "fr",
+      "name": "France",
+      "headline": "Nuclear-heavy system with growing flexibility and market reform threads",
+      "summary": "CRE deliberations, RTE publications, and EU-level market design changes implemented nationally.",
+      "developer_conditions": "Track **RES support** (capacity/ CfD-style mechanisms, auctions), **storage** rules under deliberations, **RTE connection / UoS** charges, **retail tariff** components, and **gas** price or tariff measures feeding into power bills—always note **draft vs final**.",
+      "bess_framing": "Note rules for participation in balancing and reserve markets versus energy arbitrage constraints."
+    },
+    {
+      "slug": "es",
+      "name": "Spain",
+      "headline": "Renewable integration and reform of market/regulatory instruments",
+      "summary": "CNMC initiatives, REE operator materials, and Spanish implementation of EU electricity market rules.",
+      "developer_conditions": "Track **RES remuneration** routes, **BESS** consultations, **REE/TSO grid and UoS** rules, **consumer bill** charges, and **gas** policy affecting power costs. Distinguish **proposal vs BOE-published** measures when tagging.",
+      "bess_framing": "Assess AS markets, congestion, and any capacity or flexibility mechanisms—policy context only."
+    },
+    {
+      "slug": "ch",
+      "name": "Switzerland",
+      "headline": "Non-EU interconnectivity and domestic market rules",
+      "summary": "Swissgrid and ElCom publications; distinguish Swiss arrangements from EU market couplings.",
+      "developer_conditions": "Track **support schemes** for new renewables, **storage** eligibility, **Swissgrid charges / UoS**, **permitting and grid hosting**, and **gas / retail-bill** mechanics. Separate **consultation vs ElCom final**.",
+      "bess_framing": "Cross-border availability and Swiss balancing participation rules are key watchpoints."
+    },
+    {
+      "slug": "pl",
+      "name": "Poland",
+      "headline": "Capacity and balancing reforms alongside integration with EU market architecture",
+      "summary": "URE decisions, PSE materials, and implementation of network codes.",
+      "developer_conditions": "Watch **RES auctions / support**, **BESS** pathways, **PSE grid connection and UoS**, **levies** on final tariffs, and **gas / retail** measures shifting pass-throughs. Mark **draft vs URE adopted** clearly.",
+      "bess_framing": "Follow ancillary service product design and access conditions for distributed flex."
+    },
+    {
+      "slug": "nordics",
+      "name": "Nordics (multi-area)",
+      "headline": "Nord Pool areas with zonal complexity (SE, NO, DK, FI)",
+      "summary": "Use explicit bidding zones when interpreting prices or constraints; follow Energinet, Fingrid, Statnett, Svenska kraftnät and Nord Pool notices.",
+      "developer_conditions": "Track **national RES support** (CfDs / premium routes vary), **storage** consultations, **TSO grid + UoS** charges per area, and **retail/gas** policies feeding bills. Tag the relevant **bidding-zone market** in signals when it matters.",
+      "bess_framing": "Local congestion and mFRR/balancing developments drive storage value; treat as policy signal not revenue forecast."
+    },
+    {
+      "slug": "uk",
+      "name": "United Kingdom",
+      "headline": "GB market separated from EU arrangements; own grid code and market reform path",
+      "summary": "Ofgem, National Grid ESO, and government consultations on market design and operability.",
+      "developer_conditions": "Follow **CfD / RES support** rounds, **storage** policy (licensing, planning), **DUoS / TNUoS and use-of-system**, **levies** on bills, and **gas / retail-price-cap** measures—tag **consultation vs final** determinations.",
+      "bess_framing": "Dynamic containment / regulation products and ancillary market reforms are central for storage participation routes."
+    },
+    {
+      "slug": "it",
+      "name": "Italy",
+      "headline": "MVP: lighter default coverage unless expanded",
+      "summary": "Short default copy in the MVP—deepen ARERA / MASE / Terna sources in `seed-items.json` when you want more detail here.",
+      "developer_conditions": "Track **RES support** decisions, consultations on **BESS** (including routes discussed in policy circles under labels such as **TOPE**—verify the exact decree/law name in **Gazzetta Ufficiale** or the responsible ministry/ARERA acts), **ARERA tariff and UoS** components, **grid / permit** processes, and **bollette** measures that shift pass-throughs or incentives. **Gas** decree-law chapters can move power bill items; separate **proposal vs adopted** wherever possible.",
+      "bess_framing": "Balancing gatekeeping and dispatch rules materially affect participation paths—verify in ARERA/Terna primary sources before relying on shorthand labels."
+    }
+  ]
+}
